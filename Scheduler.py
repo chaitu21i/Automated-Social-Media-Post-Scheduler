@@ -12,7 +12,9 @@ def post_to_twitter():
     
     try:
         # Your message
-        image-path = "chay.jpeg"
+        
+        content = "Believe in yourself and keep moving forward 🚀"
+        
         
         # Connect to Twitter API
         client = tweepy.Client(
@@ -38,7 +40,7 @@ scheduler = BlockingScheduler()
 scheduler.add_job(
     post_to_twitter,
     trigger='date',
-    run_date='2026-03-29 12:15:00'
+    run_date='2026-03-29 12:15:00' # put your confortable time zone.
 )
 
 # 👉 Optional: Run instantly for testing
